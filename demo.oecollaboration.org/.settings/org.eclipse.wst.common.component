@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="demo.oecollaboration.org">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="Log4j.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Log4j/Log4j">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Log4JUtils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Log4jUtils/Log4jUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Commons-IO.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Commons-IO/Commons-IO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="POI.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/POI/POI">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PDFBox.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PDFBox/PDFBox">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="LuceneCore.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LuceneCore/LuceneCore">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="biweekly.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/biweekly/biweekly">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CollaborationRoom.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CollaborationRoom/CollaborationRoom">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="POI-OOXML.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/POI-OOXML/POI-OOXML">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="OpenHierarchy.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/OpenHierarchy/OpenHierarchy">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLF4J.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLF4J/SLF4J">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cron4j.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cron4j/cron4j">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="EmailUtils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/EmailUtils/EmailUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommunityBase3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CommunityBase3/CommunityBase3">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommonsCompress.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CommonsCompress/CommonsCompress">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="FileUploadUtils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/FileUploadUtils/FileUploadUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="MinimalUser.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/MinimalUser/MinimalUser">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Cron4JUtils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Cron4JUtils/Cron4JUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Tika.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Tika/Tika">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BouncyCastle.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BouncyCastle/BouncyCastle">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PureCaptcha.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PureCaptcha/PureCaptcha">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="WebUtils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/WebUtils/WebUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="StandardUtils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/StandardUtils/StandardUtils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommonsFileUpload.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CommonsFileUpload/CommonsFileUpload">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="MetadataExtractor.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/MetadataExtractor/MetadataExtractor">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="JavaMail.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/JavaMail/JavaMail">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="demo.oecollaboration.org"/>
+        <property name="java-output-path" value="/demo.oecollaboration.org/build/classes"/>
+    </wb-module>
+</project-modules>

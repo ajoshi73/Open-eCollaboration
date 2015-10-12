@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+/* OpenHierarchy CSS overrides */
+.contentitem {
+    padding: 2.5rem;
+}
+
+.contentitem:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* ~~~~~ Backgrounds ~~~~~ */
+.background { background-color: #00A0C4; color: #FFFFFF; }
+.lightbackground { background-color: #E5F5F9; }
+.hover:hover { background-color: #00a0c4; color: #FFFFFF; }
+
+/* ~~~~~ Borders ~~~~~ */
+.border { border: 1px solid #CCECF3; }
+.bordertop { border-top: 1px solid #CCECF3; }
+.borderbottom { border-bottom: 1px solid #CCECF3; }
+.borderright { border-right: 1px solid #CCECF3; }
+.borderleft { border-left: 1px solid #CCECF3; }
+.border-radius { border-radius: 10px; }
+
+/* ~~~~~ Misc ~~~~~ */
+.contentitem .hover:hover { background-color: #0071BA; }
+.contentitem .border { border: 1px solid #DDDDDD; }
+
+.contentitem .success {
+	color: green;
+}

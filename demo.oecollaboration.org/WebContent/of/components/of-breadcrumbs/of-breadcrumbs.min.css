@@ -1,0 +1,1 @@
+@charset "UTF-8";ul.of-breadcrumbs{font-size:.875em}ul.of-breadcrumbs>li{display:inline-block}ul.of-breadcrumbs>li:before{content:'›'}ul.of-breadcrumbs>li a,ul.of-breadcrumbs>li span{font-weight:normal}

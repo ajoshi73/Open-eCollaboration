@@ -1,0 +1,25 @@
+<DBScripts>
+	<Script version="1">
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_calendar_posts` (
+				  `postID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `sectionID` int(10) unsigned NOT NULL,
+				  `title` varchar(255) NOT NULL,
+				  `description` mediumtext,
+				  `location` varchar(255) DEFAULT NULL,
+				  `wholeDay` tinyint(1) unsigned NOT NULL,
+				  `startTime` datetime NOT NULL,
+				  `endTime` datetime NOT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` varchar(45) DEFAULT NULL,
+				  PRIMARY KEY (`postID`),
+				  KEY `FK_communitybase_calendar_posts_1` (`sectionID`),
+				  CONSTRAINT `FK_communitybase_calendar_posts_1` FOREIGN KEY (`sectionID`) REFERENCES `communitybase_section_instances` (`sectionID`) ON DELETE CASCADE ON UPDATE CASCADE
+				) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+	</Script>
+</DBScripts>

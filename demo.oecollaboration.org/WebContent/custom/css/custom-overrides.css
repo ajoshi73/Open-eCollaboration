@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+.of-footer-logo.of-login-logo {
+	/*background: url("../images/logo-bg.png") no-repeat scroll 0 0 transparent;*/
+    height: 48px;
+    width: 171px;
+}
+
+.of-header .samarbetsrum-header-section.samarbetsrum-logo img {
+	margin-top: 13px;	
+}

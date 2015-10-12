@@ -1,0 +1,27 @@
+@import "../of/of-assets/css/of-master.css";
+
+@import "of-overrides.css";
+
+body {
+	background: none;
+	padding: 5px 10px;
+}
+
+body ul, body ol {
+    border: 0 none;
+    display: block;
+    margin: 5px 0 5px 25px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+body ol li {
+	 list-style: decimal;
+}
+
+body ul li {
+    border: 0 none;
+    display: list-item;
+    margin: 0;
+    padding: 0;
+}

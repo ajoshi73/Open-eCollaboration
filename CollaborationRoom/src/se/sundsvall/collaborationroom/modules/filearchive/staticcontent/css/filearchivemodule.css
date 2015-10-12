@@ -1,0 +1,211 @@
+@CHARSET "ISO-8859-1";
+
+#FileArchiveModule .of-todo-tools {
+	display: block !important;
+}
+
+#FileArchiveModule .of-fileoverlay {
+	display: none;
+	left: 0;
+	min-height: 100%;
+}
+
+#FileArchiveModule .of-fileoverlay .of-attachment-list li>div {
+	overflow: visible
+}
+
+#FileArchiveModule .of-fileoverlay-inner {
+	width: 100%;
+	min-height: 100%;
+	background: #fff
+}
+
+#FileArchiveModule .of-fileupload ul.of-attachment-list,.of-filemanager ul.of-attachment-list>li span
+	{
+	overflow: visible
+}
+
+#FileArchiveModule .of-fileupload ul.of-attachment-list>li article li {
+	display: block
+}
+
+#FileArchiveModule .of-fileupload ul.of-attachment-list>li article li:after {
+	display: none
+}
+
+#FileArchiveModule .of-fileupload {
+	float: left;
+    min-height: inherit;
+    padding: 0;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    text-align: left;
+    margin: 0 !important;
+}
+
+#FileArchiveModule .of-fileupload .of-upload {
+    float: left;
+    width: 100%;
+}
+
+#FileArchiveModule .of-fileupload .of-upload span.title {
+	font-weight: bold;
+    margin-top: 6px;
+    float: left;
+}
+
+#FileArchiveModule .of-fileupload .btn-upload {
+	border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0 auto !important;
+    padding: 0.5em 0.75em;
+    position: relative;
+    float: right;
+}
+
+#FileArchiveModule .of-fileupload .btn-upload i {
+	margin: 0 0.1em 0 0;
+}
+
+
+
+#FileArchiveModule .of-fileupload .fileinput {
+	cursor: pointer;
+    display: block !important;
+    font-size: 22px;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: visible;
+    width: 80px;
+    height: 35px;
+    border: none;
+    outline: 0;	
+}
+
+#FileArchiveModule .of-attachment-list {
+	border: 2px solid transparent;
+    border-radius: 5px;
+	overflow: visible;
+}
+
+#FileArchiveModule .of-attachment-list li.upload-files {
+	background-color: #e7e7e7;
+    padding: 7px 1.25em;
+}
+
+
+#FileArchiveModule .of-attachment-list .cancel-btn {
+	margin-right: 0.3em;
+}
+
+#FileArchiveModule .of-attachment-list li .of-toolbox {
+	top: 1.4em;
+	right: 1.65em;
+}
+
+#FileArchiveModule ul.of-attachment-list li > div {
+	padding-left: 0;
+	display: inline;
+}
+
+#FileArchiveModule ul.of-attachment-list li > div > span {
+	white-space: normal;
+    word-wrap: break-word;
+}
+
+#FileArchiveModule .of-attachment-list li a.anchor {
+	padding: 0 !important;
+}
+
+#FileArchiveModule ul.of-attachment-list li img {
+	vertical-align: top;
+}
+
+#FileArchiveModule ul.of-attachment-list li span.title {
+	position: relative;	
+}
+
+#FileArchiveModule ul.of-attachment-list li span.locked-overlay {
+	position: absolute;
+}
+
+#FileArchiveModule ul.of-attachment-list li.locked span.locked-overlay {
+	background: url(../pics/locked.png) no-repeat scroll 0 0 transparent;
+	z-index: 999;
+	height: 10px;
+    left: 10px;
+    top: -2px;
+    width: 8px;
+}
+
+#FileArchiveModule .of-attachment-list li label.of-block-label {
+	margin-top: 0.3em;
+}
+
+#FileArchiveModule .of-attachment-list li.first-file {
+	border-top: 5px solid #d3d3d3;
+}
+
+#FileArchiveModule .category .of-fileover {
+	border: 2px dashed #0064ad !important;
+	background-color: #f6f8fc !important;
+}
+
+#FileArchiveModule .category .of-fileover li {
+	background-color: #f6f8fc !important;
+}
+
+#FileArchiveModule .category h3 {
+	border: none;
+	padding-left: 2px;
+}
+
+#FileArchiveModule .category h3 .of-toolbox {
+	text-transform: none;
+	right: 1.3em;
+}
+
+#FileArchiveModule  .file-filter {
+	display: inline-block;
+}
+
+#FileArchiveModule .file-filter input {
+	margin: 0;
+    padding: 0.77em;
+    width: 250px;
+}
+
+#FileArchiveModule input[type=checkbox] {
+	display: inline;
+	margin-right: 0.55em;
+}
+
+#FileArchiveModule .attachfile-bar {
+	background-color: rgba(51, 51, 51, 0.5);
+    bottom: 0;
+    float: left;
+    left: 0;
+    padding: 7px 1.25em;
+    position: fixed;
+    width: 100%;
+}
+
+#FileArchiveModule .attachfile-bar .attached-files-count {
+	color: #ffffff;
+    float: right;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0.4em 0.8em 0.4em 0;
+}

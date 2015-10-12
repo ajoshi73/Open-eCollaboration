@@ -1,0 +1,49 @@
+<DBScripts>
+	<Script version="1">
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_page_pages` (
+				  `pageID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `sectionID` int(10) unsigned NOT NULL,
+				  `name` varchar(255) NOT NULL,
+				  `title` varchar(255) NOT NULL,
+				  `content` mediumtext NOT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` int(10) unsigned DEFAULT NULL,
+				  PRIMARY KEY (`pageID`)
+				) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+	</Script>
+	<Script version="2">
+		<Query>
+			<![CDATA[
+				DELETE FROM communitybase_page_pages WHERE sectionID NOT IN (SELECT sectionID FROM communitybase_section_instances);
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				ALTER TABLE `communitybase_page_pages` ADD CONSTRAINT `FK_communitybase_page_pages_1` FOREIGN KEY `FK_communitybase_page_pages_1` (`sectionID`)
+				    REFERENCES `communitybase_section_instances` (`sectionID`)
+				    ON DELETE CASCADE
+				    ON UPDATE CASCADE;
+			]]>
+		</Query>
+	</Script>
+	<Script version="3">
+		<Query>
+			<![CDATA[
+				ALTER TABLE `communitybase_page_pages` DROP COLUMN `name`;
+			]]>
+		</Query>
+	</Script>
+	<Script version="4">
+		<Query>
+			<![CDATA[
+				ALTER TABLE `communitybase_page_pages` MODIFY COLUMN `content` MEDIUMTEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL;
+			]]>
+		</Query>
+	</Script>
+</DBScripts>

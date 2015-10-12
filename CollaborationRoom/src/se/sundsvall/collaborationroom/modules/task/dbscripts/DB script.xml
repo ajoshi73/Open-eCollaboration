@@ -1,0 +1,61 @@
+<DBScripts>
+	<Script version="1">
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_task_tasklists` (
+				  `taskListID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `sectionID` int(10) unsigned NOT NULL,
+				  `name` varchar(255) NOT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` int(10) unsigned DEFAULT NULL,
+				  PRIMARY KEY (`taskListID`)
+				) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_task_tasks` (
+				  `taskID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `taskListID` int(10) unsigned NOT NULL,
+				  `title` varchar(255) NOT NULL,
+				  `sortIndex` int(10) unsigned DEFAULT NULL,
+				  `responsibleUser` int(10) unsigned DEFAULT NULL,
+				  `deadLine` datetime DEFAULT NULL,
+				  `finished` datetime DEFAULT NULL,
+				  `finishedByUser` int(10) unsigned DEFAULT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` int(10) unsigned DEFAULT NULL,
+				  PRIMARY KEY (`taskID`),
+				  KEY `FK_communitybase_task_tasks_1` (`taskListID`),
+				  CONSTRAINT `FK_communitybase_task_tasks_1` FOREIGN KEY (`taskListID`) REFERENCES `communitybase_task_tasklists` (`taskListID`) ON DELETE CASCADE ON UPDATE CASCADE
+				) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+	</Script>
+	<Script version="2">
+		<Query>
+			<![CDATA[
+				DELETE FROM communitybase_task_tasklists WHERE sectionID NOT IN (SELECT sectionID FROM communitybase_section_instances);
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				ALTER TABLE `communitybase_task_tasklists` ADD CONSTRAINT `FK_communitybase_task_tasklists_1` FOREIGN KEY `FK_communitybase_task_tasklists_1` (`sectionID`)
+				    REFERENCES `communitybase_section_instances` (`sectionID`)
+				    ON DELETE CASCADE
+				    ON UPDATE CASCADE;
+			]]>
+		</Query>
+	</Script>
+	<Script version="3">
+		<Query>
+			<![CDATA[
+				ALTER TABLE `communitybase_task_tasks` ADD COLUMN `description` MEDIUMTEXT AFTER `title`;
+			]]>
+		</Query>
+	</Script>
+</DBScripts>

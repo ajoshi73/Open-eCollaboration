@@ -1,0 +1,21 @@
+<DBScripts>
+	<Script version="1">
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_link_archive_links` (
+				  `linkID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `sectionID` int(10) unsigned NOT NULL,
+				  `name` varchar(255) NOT NULL,
+				  `url` text NOT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` int(10) unsigned DEFAULT NULL,
+				  PRIMARY KEY (`linkID`),
+				  KEY `FK_communitybase_link_archive_links_1` (`sectionID`),
+				  CONSTRAINT `FK_communitybase_link_archive_links_1` FOREIGN KEY (`sectionID`) REFERENCES `communitybase_section_instances` (`sectionID`) ON DELETE CASCADE ON UPDATE CASCADE
+				) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+	</Script>
+</DBScripts>

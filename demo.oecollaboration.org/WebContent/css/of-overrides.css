@@ -1,0 +1,165 @@
+@CHARSET "ISO-8859-1";
+
+.of-sidebar-menu ul li.title {
+	background-color: rgba(182, 192, 198, 0.4);
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.of-module {
+	padding: 0;
+}
+
+.contentitem input[type="radio"], .contentitem input[type="checkbox"] {
+	display: inherit;
+    margin: 3px 3px 3px 0;
+    padding: inherit;
+}
+
+.of-module input[type="radio"], .of-module input[type="checkbox"] {
+	display: none;
+}
+
+.ui-datepicker {
+	z-index: 999 !important;
+}
+
+a[name] {display: block; position: relative; top: -80px; visibility: hidden;}
+
+.cke_skin_kama *, .cke_skin_kama a:hover, .cke_skin_kama a:link, .cke_skin_kama a:visited, .cke_skin_kama a:active {
+	box-sizing: initial;
+}
+
+.cke_skin_kama input.cke_dialog_ui_input_text, .cke_skin_kama input.cke_dialog_ui_input_password {
+	min-height: initial;
+}
+
+.of-grid-list > li:nth-child(2n), .of-grid-list td:nth-child(2n), .of-grid-table > li:nth-child(2n), .of-grid-table td:nth-child(2n), .of-row-list > li:nth-child(2n), .of-row-list td:nth-child(2n) {
+	padding-left: 0;
+}
+
+.of-footer-logo.of-login-logo { 
+	background: transparent url(../images/logo.png) no-repeat 0 0;
+	width: 120px;
+	height: 48px; 
+}
+
+#PageModule ul, #PageModule ol {
+    border: 0 none;
+    display: block;
+    margin: 5px 0 5px 25px;
+    padding: 0;
+    list-style-type: disc;
+    list-style: inside;
+}
+
+#PageModule ol li {
+	 list-style: inside none decimal;
+}
+
+#PageModule ul li {
+    border: 0 none;
+    display: list-item;
+    margin: 0;
+    padding: 0;
+}
+
+#PageModule ul li > div {
+	display: inline;
+}
+
+#PageModule ul.of-meta-line {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+#TaskModule .of-select article {
+	max-height: 15em;
+}
+
+.of-post-list h2 > span > a {
+	font-size: 0.85em;
+}
+
+ul.of-notifications-list > li.notification-template {
+	border-top: 0;
+}
+
+ul.of-feed-list > li a, ul.of-feed-list > li h5 {
+	word-wrap: break-word;
+}
+
+ul.of-notifications-list > li.notification-template .article {
+	padding-bottom: 1em;
+}
+
+ul.of-notifications-list > li.notification-template .article p {
+	margin: 0;
+}
+
+ul.of-notifications-list-x > li > a.of-icon div {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+ul.of-notifications-list-x > li.title {
+	margin-bottom: 0;
+}
+
+@media (max-width: 35.999em) {
+	ul.of-post-list li.empty {
+		padding: 1.25em 0 1.25em 1rem;
+	}
+}
+
+.room-heading a {
+	color: #424242;
+}
+
+ul.of-footer-list > li:after {
+	content: none;
+}
+
+@media (min-width: 36em) {
+	ul.of-footer-list > li {
+		padding: 0 3em 0.125em 0;
+	}
+}
+
+ul.of-footer-list > li a {
+	color: #424242;
+}
+
+ul.of-attachment-list {
+	margin-bottom: 0;
+	clear: both;
+}
+
+ul.of-attachment-list li > div {
+	padding-left: 0;
+}
+
+ul.of-attachment-list li.small {
+	padding: 0.5em;
+}
+
+ul.of-post-list > li .article > span {
+	display: block;
+}
+
+ul.of-post-list > li .article > img {
+	clear: both;
+    float: left;
+    margin: 0.7em 0;
+    width: auto;
+}
+
+ul.of-meta-line {
+	clear: both;
+}
+
+ul.of-todo-list > li .of-todo-description {
+	max-width: inherit;
+}

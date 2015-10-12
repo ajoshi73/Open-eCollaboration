@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Config>
+	<Encoding>ISO-8859-1</Encoding>
+	<SystemXMLDebug>true</SystemXMLDebug>
+	<SystemXMLDebugFile>system_xmldebug.xml</SystemXMLDebugFile>
+	<ModuleXMLDebug>true</ModuleXMLDebug>
+	<ModuleXMLDebugFile>module_xmldebug.xml</ModuleXMLDebugFile>
+	<BackgroundModuleXMLDebug>true</BackgroundModuleXMLDebug>
+	<BackgroundModuleXMLDebugFile>bgmodule_xmldebug.xml</BackgroundModuleXMLDebugFile>
+	<StyleSheets>
+		<StyleSheet default="true" language="Swedish" name="default (xsl/ofdesign.xsl)">xsl/ofdesign.xsl</StyleSheet>
+		<StyleSheet language="Swedish" name="content-only">xsl/contentitem-ofdesign.xsl</StyleSheet>
+	</StyleSheets>
+	<DataSource>
+		<Url><![CDATA[jdbc:mysql://localhost:3306/demo.oecollaboration.org]]></Url>
+		<Type>SystemManaged</Type>
+		<Driver>com.mysql.jdbc.Driver</Driver>
+		<Username>root</Username>
+		<Password>root</Password>
+		<LogAbandoned>true</LogAbandoned>
+		<RemoveAbandoned>true</RemoveAbandoned>
+		<RemoveAbandonedTimeout>30</RemoveAbandonedTimeout>
+		<TestOnBorrow>true</TestOnBorrow>
+		<ValidationQuery>SELECT 1</ValidationQuery>
+		<MaxActive>20</MaxActive>
+		<MaxIdle>10</MaxIdle>
+		<MinIdle>0</MinIdle>
+		<MaxWait>10</MaxWait>
+	</DataSource>
+	<DefaultLanguage>Swedish</DefaultLanguage>
+	<CoreDAOFactory>se.unlogic.hierarchy.core.daos.implementations.mysql.MySQLCoreDAOFactory</CoreDAOFactory>
+</Config>
+

@@ -1,0 +1,87 @@
+<DBScripts>
+	<Script version="1">
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_blog_posts` (
+				  `postID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `sectionID` int(10) unsigned NOT NULL,
+				  `title` varchar(255) NOT NULL,
+				  `message` mediumtext NOT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` int(10) unsigned DEFAULT NULL,
+				  PRIMARY KEY (`postID`)
+				) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_blog_post_comments` (
+				  `commentID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+				  `message` mediumtext NOT NULL,
+				  `postID` int(10) unsigned NOT NULL,
+				  `posted` datetime NOT NULL,
+				  `poster` int(10) unsigned NOT NULL,
+				  `updated` datetime DEFAULT NULL,
+				  `editor` int(10) unsigned DEFAULT NULL,
+				  PRIMARY KEY (`commentID`),
+				  KEY `FK_communitybase_blog_post_comments_1` (`postID`),
+				  CONSTRAINT `FK_communitybase_blog_post_comments_1` FOREIGN KEY (`postID`) REFERENCES `communitybase_blog_posts` (`postID`) ON DELETE CASCADE ON UPDATE CASCADE
+				) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_blog_post_followers` (
+				  `postID` int(10) unsigned NOT NULL,
+				  `userID` int(10) unsigned NOT NULL,
+				  PRIMARY KEY (`postID`,`userID`),
+				  CONSTRAINT `FK_communitybase_blog_post_followers_1` FOREIGN KEY (`postID`) REFERENCES `communitybase_blog_posts` (`postID`) ON DELETE CASCADE ON UPDATE CASCADE
+				) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_blog_post_tags` (
+				  `postID` int(10) unsigned NOT NULL,
+				  `tag` varchar(255) NOT NULL,
+				  PRIMARY KEY (`postID`,`tag`),
+				  CONSTRAINT `FK_communitybase_blog_post_tags_1` FOREIGN KEY (`postID`) REFERENCES `communitybase_blog_posts` (`postID`) ON DELETE CASCADE ON UPDATE CASCADE
+				) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+			]]>
+		</Query>
+	</Script>
+	<Script version="2">
+		<Query>
+			<![CDATA[
+				DELETE FROM communitybase_blog_posts WHERE sectionID NOT IN (SELECT sectionID FROM communitybase_section_instances);
+			]]>
+		</Query>
+		<Query>
+			<![CDATA[
+				ALTER TABLE `communitybase_blog_posts` ADD CONSTRAINT `FK_communitybase_blog_posts_1` FOREIGN KEY `FK_communitybase_blog_posts_1` (`sectionID`)
+			    REFERENCES `communitybase_section_instances` (`sectionID`)
+			    ON DELETE CASCADE
+			    ON UPDATE CASCADE;
+
+			]]>
+		</Query>
+	</Script>
+	<Script version="3">
+		<Query>
+			<![CDATA[
+				CREATE TABLE `communitybase_blog_post_linked_files` (
+				  `postID` INTEGER UNSIGNED NOT NULL,
+				  `fileID` INTEGER UNSIGNED NOT NULL,
+				  PRIMARY KEY (`postID`, `fileID`),
+				  CONSTRAINT `FK_communitybase_blog_post_linked_files_1` FOREIGN KEY `FK_communitybase_blog_post_linked_files_1` (`fileID`)
+				    REFERENCES `communitybase_file_archive_files` (`fileID`)
+				    ON DELETE CASCADE
+				    ON UPDATE CASCADE
+				)
+				ENGINE = InnoDB;
+			]]>
+		</Query>
+	</Script>
+</DBScripts>
